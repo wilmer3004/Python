@@ -25,13 +25,16 @@ while respuesta ==1:
         for j in range(len(number)):
             # a num se le va a asignar lo que tenga la lista en la posición de la iteración para asi poderla parsear
             num = int (number[j])
-            # Unificamos lo que se encuentre en la lista de ceros para poderla multiplicar con num 
-            ope = "".join(number_in_zero)
-            # parseamos lo que acabamos de unificar para poderlo multiplicar 
-            num2=int(ope)
-            # Multiplicamos los números para poder sacar el numero descompuesto
-            result = num*num2
-            print(result)
+
+            if num != 0:
+                
+                # Unificamos lo que se encuentre en la lista de ceros para poderla multiplicar con num 
+                ope = "".join(number_in_zero)
+                # parseamos lo que acabamos de unificar para poderlo multiplicar 
+                num2=int(ope)
+                # Multiplicamos los números para poder sacar el numero descompuesto
+                result = num*num2
+                print(result)
             # Eliminamos la ultima posición de la lista para que se multiplique con un cero menos y se pueda organizar en forma descendiente
             # es decir de centenas a descends y finalmente a unidades aunque se puede hacer con valores mas grandes
             number_in_zero.pop(cont)
