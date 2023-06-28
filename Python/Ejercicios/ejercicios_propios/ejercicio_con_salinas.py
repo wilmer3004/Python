@@ -1,4 +1,4 @@
-import random;
+import random
 # Ejercicio 1
 # # Verificar cuantas vocales hay en un texto
 # vocales = ["a","e","i","o","u"]

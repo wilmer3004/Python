@@ -1,6 +1,8 @@
 import turtle
 
 print(dir(turtle))
+
+
 # Configuración inicial
 turtle.speed(3)  # Velocidad de dibujo
 turtle.bgcolor("white")  # Color de fondo
