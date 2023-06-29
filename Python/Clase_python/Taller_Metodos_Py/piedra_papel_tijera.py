@@ -9,7 +9,7 @@ def comp_piedra(eleccion):
         if random1 ==1:
             return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto empato"
         elif random1 ==2:
-            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdio"
+            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdió"
         elif random1 ==3:
             return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto gano"
     if eleccion == 2:
@@ -18,10 +18,10 @@ def comp_piedra(eleccion):
         elif random1 ==2:
             return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto empato"
         elif random1 ==3:
-            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdio"
+            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdió"
     if eleccion == 3:
         if random1 ==1:
-            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdio"
+            return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto perdió"
         elif random1 ==2:
             return f"La maquina ha elegido {posibilidades[random1][1]}, por lo tanto gano"
         elif random1 ==3:
