@@ -103,6 +103,7 @@ def login1():
 # puerto para correr el código de manera local
 
 if __name__ == '__main__':
+    app.secret_key="This is a secret"
     app.run(debug=True, port=4000)
 
 
