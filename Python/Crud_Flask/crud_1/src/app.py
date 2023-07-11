@@ -96,7 +96,7 @@ def login1():
             session['IdUsuario'] = account[0]
             return render_template('/view/admin.html')
         else:
-            return render_template('index.html')
+            return redirect(url_for('home'))
         
 
 # ----------------------------------------------
