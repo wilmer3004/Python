@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, session, url_for
 import os 
 import database as db
 
@@ -68,7 +68,39 @@ def edit(id):
 
 
 # -------------------------------------------
+# redireccion a la pagina login
+@app.route('/login')
+def login():
+    return render_template('/view/login.html')
+# -------------------------------------------
+# redireccion a la pagina admin
+@app.route('/admin')
+def admin():
+    return render_template('/view/admin.html')
+# ----------------------------------------
+# validación login
+@app.route('/login1',methods=['GET','POST'])
+def login1():
+    
+    if 'txtusername' in request.form and 'txtpassword':
+        username = request.form['txtusername']
+        password = request.form['txtpassword']
+        cursor = db.database.cursor()
+        sql = "SELECT * FROM usuario WHERE NombreUsuario = %s AND ContrasenaUsuario= %s"
+        data = (username, password,)
+        cursor.execute(sql,data)
+        account = cursor.fetchone()
+        print(account)
+        if account:
+            session['logueado']=True
+            session['IdUsuario'] = account[0]
+            return render_template('/view/admin.html')
+        else:
+            return render_template('index.html')
+        
 
+# ----------------------------------------------
+# puerto para correr el código de manera local
 
 if __name__ == '__main__':
     app.run(debug=True, port=4000)
