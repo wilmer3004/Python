@@ -1,17 +1,19 @@
 from flask import Flask, jsonify
-
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
 from products import products
 
 @app.route('/ping')
 def ping():
     return jsonify({"mensaje":"Pong"})
 
-@app.route('/products',methods=['GET','POST'])
+@app.route('/products',methods=['GET','POST'])  
 def getProducts():
-    return jsonify({"products":products})
+    data={"products":products}
+    return jsonify(data)
 
 @app.route('/products/<string:product_name>')
 def getProduct(product_name):
