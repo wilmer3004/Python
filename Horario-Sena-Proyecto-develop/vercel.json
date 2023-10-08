@@ -1,5 +1,5 @@
 
 {"rewrites": [
-  { "source": "/(.*)", "destination": "/index.py" }
+  { "source": "/(.*)", "destination": "/Horario-Sena-Proyecto-develop/index.py" }
 ]
 }
