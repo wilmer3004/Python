@@ -1,14 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "Horario-Sena-Proyecto/main.py",
-        "use":"@vercel/python"
-      }
-    ],
-    "routes":[{
-        "src":"/(.*)",
-        "dest":"src/__init__.py"
-    }
-    ]
-  }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index" }
+  ]
+}
