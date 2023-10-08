@@ -11,5 +11,9 @@ def about():
     return "about"
 
 
+if __name__ =="__main__":
+    app.run()
+
+
 
 
