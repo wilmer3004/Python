@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/main.py"
+      }
+    ],
+    "functions": {
+      "api": {
+        "handler": "app.server"
+      }
+    }
+  }
