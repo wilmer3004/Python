@@ -1,8 +1,22 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.py/$1" }
+  "env": {
+    "SECRET_KEY": "192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf",
+    "JWT_KEY": "D5*F?_1?-d$f*1",
+    "MYSQL_HOST": "localhost",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "",
+    "MYSQL_DB": "dbhorariosena"
+  },
+  "builds": [
+    {
+      "src": "/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.py"
+    }
   ]
 }
-
-
-
