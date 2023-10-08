@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "Python/Crud-Flask/crud_1/app.py",
+        "use":"@vercel/python"
+      }
+    ],
+    "routes":[{
+        "src":"/(.*)",
+        "dest":"app.py"
+    }
+    ]
+  }
