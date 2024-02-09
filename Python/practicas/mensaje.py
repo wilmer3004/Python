@@ -1,8 +1,7 @@
 import pyautogui, webbrowser
 from time import sleep
-open('https://web.whatsapp.com/send?phone=+573026000487')
-sleep(40)
-pyautogui.typewrite('Escribí un programa unicamente para decirte lo mucho que te quiero: ')
+webbrowser.open('https://web.whatsapp.com/send?phone=+573115270012')
+sleep(60)
 pyautogui.press('enter')
 
 for i in range(400):
