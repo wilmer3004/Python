@@ -1,6 +1,6 @@
 import pyautogui, webbrowser
 from time import sleep
-webbrowser.open('https://web.whatsapp.com/send?phone=+573115270012')
+webbrowser.open('https://web.whatsapp.com/send?phone=+57')
 sleep(60)
 pyautogui.press('enter')
 
